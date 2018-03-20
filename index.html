@@ -1,17 +1,320 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>fais pas l’poireau</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	<header>
-		
-	</header>
-	
 
-	<script type="text/javascript" src="js/app.js"></script>
+<head>
+    <title>fais pas l’poireau</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+	    <a class="navbar-brand col" href="#">
+		    <img id="logo" src="logos/logo.png" alt="logo">
+		</a>
+
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+		    <div class="navbar-nav navbar-right inline-form col" id="nav-icones-marge">
+		      <a class="nav-item nav-link col active" href="#" data-toggle="modal" data-target="#ventes">
+		        <img type="image/svg+xml" src="logos/shopping-cart.svg" class="nav-icones">
+		      </a>
+		      <a class="nav-item nav-link col" href="#" data-toggle="modal" data-target="#ajouter">
+		        <img type="image/svg+xml" src="logos/plus-circle.svg" class="nav-icones">
+		      </a>
+		      <a class="nav-item nav-link col" href="#" data-toggle="modal" data-target="#perdu">
+		        <img type="image/svg+xml" src="logos/minus-circle.svg" class="nav-icones">
+		      </a>
+		      <a class="nav-item nav-link col" href="#" data-toggle="modal" data-target="#imprimer">
+		        <img type="image/svg+xml" src="logos/print.svg" class="nav-icones">
+		      </a>
+		      <a class="nav-item nav-link col" href="#" data-toggle="modal" data-target="#geoMarketing">
+		        <img type="image/svg+xml" src="logos/map-marker-alt.svg" class="nav-icones">
+		      </a>
+		    </div>
+		</div>
+    </nav>
+
+    <!-- modales -->
+
+
+	<div class="modal fade" id="ventes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Nouvelle vente</h5>
+	        <div class="row">
+	        </div>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+	        	<div class="col-4">
+	        		<label>Heure</label><br>
+	        		<input class="form-control" type="time" name="heure">
+	        	</div>
+	        	<div class="col-8">
+	        		<label>Ville</label><br>
+	        		<select class="form-control">
+				        <option selected>Pamiers city</option>
+				        <option>Toulouse</option>
+				    </select>
+	        	</div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	        	<div class="col-4">
+	        		<label>Quantité</label><br>
+	        		<input class="form-control" type="text" name="quantité" placeholder="100">
+	        	</div>
+	        	<div class="col-8">
+	        		<label>Fruit/Légume</label><br>
+	        		<select class="form-control">
+				        <option selected>Patates</option>
+				        <option>...</option>
+				    </select>
+	        	</div>
+	        	<div class="col-4">
+	        		<br><label>Quantité</label><br>
+	        		<input class="form-control" type="text" name="quantité" placeholder="2,5">
+	        	</div>
+	        	<div class="col-8">
+	        		<br><label>Fruit/Légume</label><br>
+	        		<select class="form-control">
+				        <option selected>Tomates</option>
+				        <option>...</option>
+				    </select>
+	        	</div>
+	        	<div class="col-4">
+	        		<br><label>Quantité</label><br>
+	        		<input class="form-control" type="text" name="quantité" placeholder="1">
+	        	</div>
+	        	<div class="col-8">
+	        		<br><label>Fruit/Légume</label><br>
+	        		<select class="form-control">
+				        <option selected>Salade</option>
+				        <option>...</option>
+				    </select>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+	        <button type="button" class="btn btn-primary">Ajouter un élément</button>
+	        <button type="button" class="btn btn-success">Valider la vente</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="ajouter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Nouvelle entrée dans le stock</h5>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+				<div class="col-4">
+	        		<label>Quantité</label><br>
+	        		<input class="form-control" type="text" name="quantité" placeholder="3">
+	        	</div>
+	        	<div class="col-8">
+	        		<label>Fruit/Légume</label><br>
+	        		<select class="form-control">
+				        <option selected>Courgettes</option>
+				        <option>...</option>
+				    </select>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+	        <button type="button" class="btn btn-success">Ajouter</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="perdu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Quantité perdue/jetée</h5>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-4">
+	        		<label>Quantité</label><br>
+	        		<input class="form-control" type="text" name="quantité" placeholder="3">
+	        	</div>
+	        	<div class="col-8">
+	        		<label>Fruit/Légume</label><br>
+	        		<select class="form-control">
+				        <option selected>Courgettes</option>
+				        <option>...</option>
+				    </select>
+	        	</div>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+	        <button type="button" class="btn btn-success">Valider la suppression</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="imprimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Impression</h5>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-success">Imprimer</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="geoMarketing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Géomarketing</h5>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+    <!-- page principale -->
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active police-verte" data-toggle="tab" href="#Tous">Tous</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link police-verte" data-toggle="tab" href="#Fruits">Fruits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link police-verte" data-toggle="tab" href="#Légumes">Légumes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane active" id="Tous">
+        	<div class="row">
+       		 	<div class="col-md-3"></div>
+       		 	<div class="col-md-6">
+		            <table class="table">
+		                <thead>
+		                    <tr>
+		                        <th>Nom</th>
+		                        <th>Quantité</th>
+		                    </tr>
+		                </thead>
+		            </table>
+		        </div>
+	           	<div class="col-md-3"></div>
+	        </div>
+        </div>
+       	<div class="tab-pane" id="Fruits">
+       		<div class="row">
+       		 	<div class="col-md-3"></div>
+       		 	<div class="col-md-6">
+		            <table class="table">
+		                <thead>
+		                    <tr>
+		                        <th>Nom</th>
+		                        <th>Quantité</th>
+		                    </tr>
+		                </thead>
+		            </table>
+		        </div>
+	           	<div class="col-md-3"></div>
+	        </div>
+        </div>
+        <div class="tab-pane" id="Légumes">
+        	<div class="row">
+        		<div class="col-md-3"></div>
+        		<div class="col-md-6">
+		            <table class="table">
+		                <thead>
+		                    <tr>
+		                        <th>Nom</th>
+		                        <th>Quantité</th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+		                    <tr>
+		                        <td>Ail</td>
+		                        <td>30</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Brocoli</td>
+		                        <td>20</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Chou de Bruxelle</td>
+		                        <td>12</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Comonmbre</td>
+		                        <td>6,3</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Cornichon</td>
+		                        <td>10,6</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Epinard</td>
+		                        <td>5,2</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Haricots</td>
+		                        <td>12,4</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Mâche</td>
+		                        <td>3,5</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Patate douce</td>
+		                        <td>5</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Pomme de terre</td>
+		                        <td>120</td>
+		                    </tr>
+		                </tbody>
+		            </table>
+		        </div>
+		        <div class="col-md-3"></div>
+        	</div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+/* navbar */
+
+nav {
+	background-color: #E1EFE0;
+}
+
+#logo {
+	width: 200px;
+	float: right;
+}
+
+.nav-icones {
+	color: #7DAB7A;
+	width: 60px;
+}
+
+#nav-icones-marge {
+	margin-left: 15%;
+}
+
+
+/* page principale */
+
+.police-verte {
+	color: #7DAB7A;
+	font-size: 20pt;
+}
+
+/* modales */
+
+label {
+	color: lightgrey;
+}
